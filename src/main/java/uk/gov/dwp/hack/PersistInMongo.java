@@ -14,9 +14,9 @@ import java.util.Map;
 public class PersistInMongo {
   private MongoConnectionUtils connectionUtils = new MongoConnectionUtils();
   public static void main(String[] args) {
-    PersistInMongo persistInMongo = new PersistInMongo();
-    JsonNode jsonNode = persistInMongo.parseJson();
-    persistInMongo.iterateAndPersist(jsonNode);
+//    PersistInMongo persistInMongo = new PersistInMongo();
+//    JsonNode jsonNode = persistInMongo.parseJson();
+//    persistInMongo.iterateAndPersist(jsonNode);
   }
 
   private void iterateAndPersist(JsonNode jsonNode) {
