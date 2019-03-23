@@ -2,6 +2,8 @@ package uk.gov.dwp.hack;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import io.dropwizard.Application;
+import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
+import io.dropwizard.configuration.SubstitutingSourceProvider;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import uk.gov.dwp.hack.dao.FoodBankDao;
@@ -24,7 +26,7 @@ public class FoodBankApplication extends Application<FoodBankConfiguration> {
 
     @Override
     public void initialize(final Bootstrap<FoodBankConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.setConfigurationSourceProvider(new SubstitutingSourceProvider(bootstrap.getConfigurationSourceProvider(), new EnvironmentVariableSubstitutor(true)));
     }
 
     @Override

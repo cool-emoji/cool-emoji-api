@@ -1,11 +1,7 @@
 server:
-  maxThreads: 512
   applicationConnectors:
     - type: http
-      port: 8090
-  adminConnectors:
-    - type: http
-      port: 8081
+      port: ${PORT}
 
 mongoConfig:
   connectionString: mongodb://heroku_m2n6blzn:9onrinh4p04r2tgfhvaim5v6hk@ds121636.mlab.com:21636/heroku_m2n6blzn
