@@ -3,16 +3,15 @@ package uk.gov.dwp.hack;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.apache.commons.lang3.StringUtils;
 import org.bson.Document;
-import uk.gov.dwp.hack.utils.MongoConnectionUtils;
+import uk.gov.dwp.hack.util.MongoConnectionUtil;
 
 import java.util.Iterator;
 import java.util.Map;
 
 public class PersistInMongo {
-  private MongoConnectionUtils connectionUtils = new MongoConnectionUtils();
+  private MongoConnectionUtil connectionUtils = new MongoConnectionUtil();
   public static void main(String[] args) {
 //    PersistInMongo persistInMongo = new PersistInMongo();
 //    JsonNode jsonNode = persistInMongo.parseJson();
@@ -45,14 +44,14 @@ public class PersistInMongo {
 
   private void persist(JsonNode jsonNode) {
     //connectionUtils.getDatabase().createCollection("food-bank");
-    ObjectMapper mapper =   new ObjectMapper();
-    try {
-      String json        =   mapper.writeValueAsString(jsonNode);
-      connectionUtils.getDatabase().getCollection("food-bank").insertOne(Document.parse(json));
-    }
-    catch (JsonProcessingException e) {
-      e.printStackTrace();
-    }
+//    ObjectMapper mapper =   new ObjectMapper();
+//    try {
+//      String json        =   mapper.writeValueAsString(jsonNode);
+//      connectionUtils.getDatabase().getCollection("food-bank").insertOne(Document.parse(json));
+//    }
+//    catch (JsonProcessingException e) {
+//      e.printStackTrace();
+//    }
 
   }
 }
