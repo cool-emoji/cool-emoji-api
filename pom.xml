@@ -14,7 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <dropwizard.version>1.3.9</dropwizard.version>
-    <mainClass>com.hack.FoodBankApplication</mainClass>
+    <mainClass>uk.gov.dwp.hack.FoodBankApplication</mainClass>
     <mongodriver.version>3.8.2</mongodriver.version>
   </properties>
 
